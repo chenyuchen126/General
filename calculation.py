@@ -106,3 +106,8 @@ def azimuthAngle( x1,  y1,  x2,  y2):
 
 print (azimuthAngle( 121.460612,25.062169, 121.463516,25.059824))
 
+
+from operator import itemgetter
+ary = [{'name':'aaa', 'age':30}, {'name':'bbb', 'age': 20}, {'name':'ccc', 'age': 40}]
+newlist = sorted(ary, key=itemgetter('age'), reverse=True)
+print(newlist)
