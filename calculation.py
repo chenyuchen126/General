@@ -7,7 +7,10 @@ https://wiki.osgeo.org/wiki/Taiwan_datums
 http://www.sunriver.com.tw/grid_taipower.htm
 http://site.whataiwant.com/?action-viewnews-itemid-174
 """
-import os,re,math
+import os
+import re
+import math
+from operator import itemgetter
 
 def checkArea(type):
     if type == "A": return (170000,2750000)#新竹 竹北市 桃園新豐鄉
@@ -107,7 +110,7 @@ def azimuthAngle( x1,  y1,  x2,  y2):
 print (azimuthAngle( 121.460612,25.062169, 121.463516,25.059824))
 
 
-from operator import itemgetter
-ary = [{'name':'aaa', 'age':30}, {'name':'bbb', 'age': 20}, {'name':'ccc', 'age': 40}]
-newlist = sorted(ary, key=itemgetter('age'), reverse=True)
+#排序list裡面的dict
+abc = [{'name':'aaa', 'age':30}, {'name':'bbb', 'age': 20}, {'name':'ccc', 'age': 40}]
+newlist = sorted(abc, key=itemgetter('age'), reverse=True)
 print(newlist)
