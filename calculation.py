@@ -114,3 +114,12 @@ print (azimuthAngle( 121.460612,25.062169, 121.463516,25.059824))
 abc = [{'name':'aaa', 'age':30}, {'name':'bbb', 'age': 20}, {'name':'ccc', 'age': 40}]
 newlist = sorted(abc, key=itemgetter('age'), reverse=True)
 print(newlist)
+
+
+#清理資料ETL
+def clear_data(input_data):
+    return input_data.strip()
+
+def clear_p_id(input_data):
+    return input_data[0],input_data[1]
+    
