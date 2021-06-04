@@ -131,9 +131,9 @@ def clear_data(input_data):
 def clear_p_id(input_data):
     return input_data[0],input_data[1]
 
-#找出尾巴的檔案(圖片)
-#items=("jpg","gif","png")
-#def check_filename(input_data):
-#    return input_data.endswith(items)
-    
+#找格式
+check_type=("txt","csv")
+def check_filename(input_data,check_type):
+    return input_data.endswith(check_type)
+
     
