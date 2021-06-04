@@ -86,34 +86,12 @@ def tWD67TM2toWGS84(x,y):
    out['status'] = True
    return out
 
-# long1,lat1 long2,lat2 第一組位置到第二組位置
-def azimuthAngle( x1,  y1,  x2,  y2):
-    angle = 0.0;
-    dx = x2 - x1
-    dy = y2 - y1
-    if  x2 == x1:
-        angle = math.pi / 2.0
-        if  y2 == y1 :
-            angle = 0.0
-        elif y2 < y1 :
-            angle = 3.0 * math.pi / 2.0
-    elif x2 > x1 and y2 > y1:
-        angle = math.atan(dx / dy)
-    elif  x2 > x1 and  y2 < y1 :
-        angle = math.pi / 2 + math.atan(-dy / dx)
-    elif  x2 < x1 and y2 < y1 :
-        angle = math.pi + math.atan(dx / dy)
-    elif  x2 < x1 and y2 > y1 :
-        angle = 3.0 * math.pi / 2.0 + math.atan(dy / -dx)
-    return (angle * 180 / math.pi)
-
-print (azimuthAngle( 121.460612,25.062169, 121.463516,25.059824))
-
-
 #排序list裡面的dict
 abc = [{'name':'aaa', 'age':30}, {'name':'bbb', 'age': 20}, {'name':'ccc', 'age': 40}]
 newlist = sorted(abc, key=itemgetter('age'), reverse=True)
 print(newlist)
+
+#
 
 
 #清理資料ETL
@@ -145,9 +123,17 @@ print(newlist)
 嘉義市	I
 新竹市	O
 """
+#清理前後空白
 def clear_data(input_data):
     return input_data.strip()
 
+#個人ＩＤ
 def clear_p_id(input_data):
     return input_data[0],input_data[1]
+
+#找出尾巴的檔案(圖片)
+#items=("jpg","gif","png")
+#def check_filename(input_data):
+#    return input_data.endswith(items)
+    
     
