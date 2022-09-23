@@ -1,5 +1,11 @@
+# -*- coding: utf-8 -*-
+"""
+Spyder Editor
+
+This is a temporary script file.
+"""
+
 import base64
-import getpass
 
 def get_key():
     return "badfdfeatretq44315u3iu8aut8471409754ut94q8718495984utq94qutq984t"
